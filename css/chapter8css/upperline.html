@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>practice</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      header {
+        height: 90px;
+        width: 100vw;
+        background-color: black;
+      }
+      main {
+        background-color: rgb(142, 210, 145);
+        height: 100vh;
+        width: 100vw;
+      }
+      .progress {
+        background-color: red;
+        height: 2px;
+        animation: name 1s ease-in-out 1;
+      }
+      @keyframes name {
+        0% {
+          width: 0px;
+        }
+        70% {
+          width: 80vw;
+        }
+        100% {
+          width: 100vw;
+        }
+      }
+      /* img {
+        animation: rotate 1000ms ease-in infinite;
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        transform:  rotate(0deg);
+      } */
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(350deg);
+        }
+        }
+      @keyframes slide1 {
+        0% {
+          transform: translate(-8vw);
+        }
+        100% {
+            transform: translate(85vw);
+
+        }
+    }
+      @keyframes slide2 {
+        0% {
+          transform: translate(0vw);
+        }
+        100% {
+            transform: translate(92vw);
+
+        }
+      }
+      img{
+        display: block;
+        margin: auto;
+      }
+      .slider{
+        background-color: white;
+        height: 523px;
+        overflow: hidden;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+      }
+      .img1{
+        transform: translate(-8vw);
+        animation: slide1 1s 2s forwards;
+      }
+      .img1{
+        transform: translate(0vw);
+        animation: slide1 1s 2s forwards;
+      }   
+      .img1{
+        transform: translate( 8vw);
+       
+      }
+    </style>
+  </head>
+  <body>
+    <div class="progress"></div>
+    <header></header>
+    
+    </div>
+    <main>
+      <!-- <img src="https://picsum.photos/200/300" width="200px" /> -->
+      <div class="slider">
+        <div class="img1">
+          <img src="https://picsum.photos/200/301" width="200px" />
+        </div>
+        <div class="img2">
+          <img src="https://picsum.photos/200/302" width="200px" />
+        </div>
+        <div class="img3">
+          <img src="https://picsum.photos/200/303" width="200px" />
+        </div>
+    </main>
+  </body>
+</html>

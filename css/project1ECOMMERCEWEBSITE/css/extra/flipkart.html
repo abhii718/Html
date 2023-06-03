@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E COMMERCE WEBSITE</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+      body {
+        overflow-x: hidden;
+      }
+      :root {
+        --main-bg-color: #2874f0;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: var(--main-bg-color);
+        font-family: "Lato", sans-serif;
+        position: sticky;
+        top: 0;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        width: 100vw;
+      }
+
+      nav {
+        display: flex;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        /* box-shadow: 5px 5px 10px rgba(0,0,0,0.3); */
+      }
+
+      .logo img {
+        width: 88px;
+        padding: 0 25px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 58px;
+      }
+
+      nav ul li {
+        list-style: none;
+        padding: 0 2vw;
+      }
+
+      
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+      }
+
+      nav ul li a:hover {
+        color: rgb(31, 62, 121);
+        /* font-weight: bold; */
+        background-color: rgb(255, 255, 255);
+        color: black;
+      }
+
+      .search {
+        display: flex;
+        align-items: center;
+      }
+
+      .search input {
+        width: 30vw;
+        height: 27px;
+        border-radius: 3px;
+        margin: 0 1vw 0 1vw;
+        font-family: inherit;
+        padding: 0 10px;
+      }
+
+      .search button {
+        font-family: "Lato", sans-serif;
+        font-weight: 700;
+      }
+
+      .search button:hover {
+        font-weight: 900;
+        background-color: rgba(51, 0, 255, 0.459);
+      }
+
+      .container {
+        min-height: calc(100vh - 58px - 12vh);
+      }
+
+      .slider {
+        margin: 20px 6%;
+        width: 100%;
+        height: auto;
+      }
+      .slider img {
+        width: 88%;
+        height: auto;
+      }
+
+      .card {
+        background-color: #e2d72b21;
+        max-width: 94vw;
+        margin: auto;
+        font-family: "Lato", sans-serif;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .cards {
+        display: flex;
+        overflow: scroll;
+        /* box-shadow: 5px 5px 10px rgba(0,0,0,0.3); */
+      }
+
+      .card-item {
+        display: inline-flex;
+        /* justify-content: center; */
+        flex-direction: column;
+        align-items: center;
+        width: 146px;
+        /* text-align: center; */
+        margin: 0 15px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .card h2 {
+        font-family: "Lato", sans-serif;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      .size {
+        height: 151px;
+        width: 151px;
+      }
+
+      footer {
+        background-color: var(--main-bg-color);
+        height: 12vh;
+        /* width: 100vw; */
+        color: white;
+        font-family: "Lato", sans-serif;
+        margin: 30px 0;
+        box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.3);
+      }
+      .text-all-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .btn {
+        padding: 5px 10px;
+        color: white;
+        background-color: var(--main-bg-color);
+        border: 2px solid white;
+        border-radius: 7px;
+        cursor: pointer;
+      }
+      .my-1 {
+        margin: 6px 0px;
+      }
+      .my-2 {
+        margin: 7px 0 22px 0px;
+      }
+      .text-center {
+        text-align: center;
+      }
+      @media screen and (max-width: 700px) {
+        body {
+          background-color: red;
+        }
+        header {
+          height: 12vh;
+        }
+        nav {
+          flex-direction: column;
+        }
+        .logo {
+          display: flex;
+          justify-content: center;
+          margin: 17px;
+        }
+        .search {
+          display: flex;
+          justify-content: flex-end;
+          position: relative;
+          /* top: -60px; */
+          bottom: 65px;
+          right: 10px;
+        }
+        .hac {
+          display: flex;
+          /* justify-content: flex-start; */
+          position: relative;
+          bottom: 19px;
+        }
+        footer {
+          height: 70px;
+          margin: 0px;
+        }
+        .size {
+          height: 125px;
+          width: 125px;
+        }
+        .my-1 {
+          margin: 4px 0px;
+        }
+        .my-2 {
+          margin: 7px 0 15px 0px;
+        }
+        .card-item {
+          margin: 11px;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        body {
+          background-color: rgb(40, 81, 139);
+        }
+        header {
+          height: 11vh;
+        }
+        footer {
+          height: 50px;
+          margin: 0px;
+        }
+        .size {
+          height: 100px;
+          width: 101px;
+        }
+        .my-1 {
+          margin: 3px 0px;
+        }
+        .my-2 {
+          margin: 7px 0 10px 0px;
+        }
+        .card-item {
+          margin: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo"><img src="/image/flipkartlogo.png" alt="" /></div>
+        <ul class="hac">
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+        <div class="search aa">
+          <input type="text" placeholder="search here" />
+          <button class="btn aa">Search</button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div class="slider">
+          <img src="https://picsum.photos/1400/500" alt="" />
+        </div>
+        <hr />
+        <div class="card">
+          <h2 class="my-2">This is product</h2>
+          <div class="cards">
+            <div class="card-item">
+              <img class="size" src="https://picsum.photos/100/100" alt="" />
+              <div class="line">
+                <p class=".text-center my-1">name is</p>
+                <p class=".text-center my-1">cricket</p>
+                <p class=".text-center my-1">off 30%</p>
+              </div>
+            </div>
+            <div class="card-item">
+              <img class="size" src="https://picsum.photos/100/100" alt="" />
+              <div class="line">
+                <p class=".text-center my-1">name is</p>
+                <p class=".text-center my-1">cricket</p>
+                <p class=".text-center my-1">off 30%</p>
+              </div>
+            </div>
+            <div class="card-item">
+              <img class="size" src="https://picsum.photos/100/100" alt="" />
+              <div class="line">
+                <p class=".text-center my-1">name is</p>
+                <p class=".text-center my-1">cricket</p>
+                <p class=".text-center my-1">off 30%</p>
+              </div>
+            </div>
+            <div class="card-item">
+              <img class="size" src="https://picsum.photos/100/100" alt="" />
+              <div class="line">
+                <p class=".text-center my-1">name is</p>
+                <p class=".text-center my-1">cricket</p>
+                <p class=".text-center my-1">off 30%</p>
+              </div>
+            </div>
+            <div class="card-item">
+              <img class="size" src="https://picsum.photos/100/100" alt="" />
+              <div class="line">
+                <p class=".text-center my-1">name is</p>
+                <p class=".text-center my-1">cricket</p>
+                <p class=".text-center my-1">off 30%</p>
+              </div>
+            </div>
+            <div class="card-item">
+              <img class="size" src="https://picsum.photos/100/100" alt="" />
+              <div class="line">
+                <p class=".text-center my-1">name is</p>
+                <p class=".text-center my-1">cricket</p>
+                <p class=".text-center my-1">off 30%</p>
+              </div>
+            </div>
+            <div class="card-item">
+              <img class="size" src="https://picsum.photos/100/100" alt="" />
+              <div class="line">
+                <p class=".text-center my-1">name is</p>
+                <p class=".text-center my-1">cricket</p>
+                <p class=".text-center my-1">off 30%</p>
+              </div>
+            </div>
+            <div class="card-item">
+              <img class="size" src="https://picsum.photos/100/100" alt="" />
+              <div class="line">
+                <p class=".text-center my-1">name is</p>
+                <p class=".text-center my-1">cricket</p>
+                <p class=".text-center my-1">off 30%</p>
+              </div>
+            </div>
+            <div class="card-item">
+              <img class="size" src="https://picsum.photos/100/100" alt="" />
+              <div class="line">
+                <p class=".text-center my-1">name is</p>
+                <p class=".text-center my-1">cricket</p>
+                <p class=".text-center my-1">off 30%</p>
+              </div>
+            </div>
+            <div class="card-item">
+              <img class="size" src="https://picsum.photos/100/100" alt="" />
+              <div class="line">
+                <p class=".text-center my-1">name is</p>
+                <p class=".text-center my-1">cricket</p>
+                <p class=".text-center my-1">off 30%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="card">
+          <h2 class="my-2">This is product</h2>
+          <div class="cards">
+            <div class="card-item">
+              <img class="size" src="https://picsum.photos/100/100" alt="" />
+              <div class="line">
+                <p class=".text-center my-1">name is</p>
+                <p class=".text-center my-1">cricket</p>
+                <p class=".text-center my-1">off 30%</p>
+              </div>
+            </div>
+            <div class="card-item">
+              <img class="size" src="https://picsum.photos/100/100" alt="" />
+              <div class="line">
+                <p class=".text-center my-1">name is</p>
+                <p class=".text-center my-1">cricket</p>
+                <p class=".text-center my-1">off 30%</p>
+              </div>
+            </div>
+            <div class="card-item">
+              <img class="size" src="https://picsum.photos/100/100" alt="" />
+              <div class="line">
+                <p class=".text-center my-1">name is</p>
+                <p class=".text-center my-1">cricket</p>
+                <p class=".text-center my-1">off 30%</p>
+              </div>
+            </div>
+            <div class="card-item">
+              <img class="size" src="https://picsum.photos/100/100" alt="" />
+              <div class="line">
+                <p class=".text-center my-1">name is</p>
+                <p class=".text-center my-1">cricket</p>
+                <p class=".text-center my-1">off 30%</p>
+              </div>
+            </div>
+            <div class="card-item">
+              <img class="size" src="https://picsum.photos/100/100" alt="" />
+              <div class="line">
+                <p class=".text-center my-1">name is</p>
+                <p class=".text-center my-1">cricket</p>
+                <p class=".text-center my-1">off 30%</p>
+              </div>
+            </div>
+            <div class="card-item">
+              <img class="size" src="https://picsum.photos/100/100" alt="" />
+              <div class="line">
+                <p class=".text-center my-1">name is</p>
+                <p class=".text-center my-1">cricket</p>
+                <p class=".text-center my-1">off 30%</p>
+              </div>
+            </div>
+            <div class="card-item">
+              <img class="size" src="https://picsum.photos/100/100" alt="" />
+              <div class="line">
+                <p class=".text-center my-1">name is</p>
+                <p class=".text-center my-1">cricket</p>
+                <p class=".text-center my-1">off 30%</p>
+              </div>
+            </div>
+            <div class="card-item">
+              <img class="size" src="https://picsum.photos/100/100" alt="" />
+              <div class="line">
+                <p class=".text-center my-1">name is</p>
+                <p class=".text-center my-1">cricket</p>
+                <p class=".text-center my-1">off 30%</p>
+              </div>
+            </div>
+            <div class="card-item">
+              <img class="size" src="https://picsum.photos/100/100" alt="" />
+              <div class="line">
+                <p class=".text-center my-1">name is</p>
+                <p class=".text-center my-1">cricket</p>
+                <p class=".text-center my-1">off 30%</p>
+              </div>
+            </div>
+            <div class="card-item">
+              <img class="size" src="https://picsum.photos/100/100" alt="" />
+              <div class="line">
+                <p class=".text-center my-1">name is</p>
+                <p class=".text-center my-1">cricket</p>
+                <p class=".text-center my-1">off 30%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="card">
+          <h2 class="my-2">This is product</h2>
+          <div class="cards">
+            <div class="card-item">
+              <img class="size" src="https://picsum.photos/100/100" alt="" />
+              <div class="line">
+                <p class=".text-center my-1">name is</p>
+                <p class=".text-center my-1">cricket</p>
+                <p class=".text-center my-1">off 30%</p>
+              </div>
+            </div>
+            <div class="card-item">
+              <img class="size" src="https://picsum.photos/100/100" alt="" />
+              <div class="line">
+                <p class=".text-center my-1">name is</p>
+                <p class=".text-center my-1">cricket</p>
+                <p class=".text-center my-1">off 30%</p>
+              </div>
+            </div>
+            <div class="card-item">
+              <img class="size" src="https://picsum.photos/100/100" alt="" />
+              <div class="line">
+                <p class=".text-center my-1">name is</p>
+                <p class=".text-center my-1">cricket</p>
+                <p class=".text-center my-1">off 30%</p>
+              </div>
+            </div>
+            <div class="card-item">
+              <img class="size" src="https://picsum.photos/100/100" alt="" />
+              <div class="line">
+                <p class=".text-center my-1">name is</p>
+                <p class=".text-center my-1">cricket</p>
+                <p class=".text-center my-1">off 30%</p>
+              </div>
+            </div>
+            <div class="card-item">
+              <img class="size" src="https://picsum.photos/100/100" alt="" />
+              <div class="line">
+                <p class=".text-center my-1">name is</p>
+                <p class=".text-center my-1">cricket</p>
+                <p class=".text-center my-1">off 30%</p>
+              </div>
+            </div>
+            <div class="card-item">
+              <img class="size" src="https://picsum.photos/100/100" alt="" />
+              <div class="line">
+                <p class=".text-center my-1">name is</p>
+                <p class=".text-center my-1">cricket</p>
+                <p class=".text-center my-1">off 30%</p>
+              </div>
+            </div>
+            <div class="card-item">
+              <img class="size" src="https://picsum.photos/100/100" alt="" />
+              <div class="line">
+                <p class=".text-center my-1">name is</p>
+                <p class=".text-center my-1">cricket</p>
+                <p class=".text-center my-1">off 30%</p>
+              </div>
+            </div>
+            <div class="card-item">
+              <img class="size" src="https://picsum.photos/100/100" alt="" />
+              <div class="line">
+                <p class=".text-center my-1">name is</p>
+                <p class=".text-center my-1">cricket</p>
+                <p class=".text-center my-1">off 30%</p>
+              </div>
+            </div>
+            <div class="card-item">
+              <img class="size" src="https://picsum.photos/100/100" alt="" />
+              <div class="line">
+                <p class=".text-center my-1">name is</p>
+                <p class=".text-center my-1">cricket</p>
+                <p class=".text-center my-1">off 30%</p>
+              </div>
+            </div>
+            <div class="card-item">
+              <img class="size" src="https://picsum.photos/100/100" alt="" />
+              <div class="line">
+                <p class=".text-center my-1">name is</p>
+                <p class=".text-center my-1">cricket</p>
+                <p class=".text-center my-1">off 30%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="text-all-center">
+      <p>Copyrights &copy; Mycart.com</p>
+    </footer>
+  </body>
+</html>

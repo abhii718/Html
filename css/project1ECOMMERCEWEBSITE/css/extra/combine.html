@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-commerce Website</title>
+  <style>
+   
+    @media screen and (max-width: 768px) {
+      .container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      }
+    }
+
+    
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      position: relative;
+    }
+
+    nav ul li a::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+      bottom: -5px;
+      left: 0;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    nav ul li a:hover::before {
+      transform: scaleX(1);
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .search {
+      margin-top: 20px;
+    }
+
+    .search input[type="text"] {
+      padding: 10px;
+      border: none;
+      border-radius: 4px 0 0 4px;
+    }
+
+    .search button {
+      padding: 10px;
+      border: none;
+      border-radius: 0 4px 4px 0;
+      background-color: #555;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      background-color: #f2f2f2;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .card img {
+      max-width: 100%;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background-color: #555;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #333;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="/images/logo.png" alt="Logo">
+      </div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="search">
+      <input type="text" placeholder="Search...">
+      <button class="btn">Search</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <img src="/images/product1.jpg" alt="Product Image">
+      <h2>Product 1</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <button class="btn">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="/images/product2.jpg" alt="Product Image">
+      <h2>Product 2</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <button class="btn">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="/images/product3.jpg" alt="Product Image">
+      <h2>Product 3</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <button class="btn">Add to Cart</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 E-commerce Website. All rights reserved.</p>
+  </footer>
+</body>
+</html>

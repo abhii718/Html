@@ -1,0 +1,21 @@
+.red{
+color: rgb(95, 147, 203);
+background: #9e3636;
+
+}
+.one
+{
+
+    color: hsl(5, 65%, 54%);
+    background-color: brown;
+}
+.army{
+    color: #0d0620;
+    background-color: red;
+}
+*{
+
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}

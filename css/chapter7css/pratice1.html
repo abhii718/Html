@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        display: inline-grid;
+        padding: 0 10px;
+        margin: 0 10px;
+        grid-template-columns: auto auto;
+      }
+      ul {
+        padding: 20px;
+      }
+      header {
+        background-color: black;
+        color: white;
+      }
+      @media screen and (max-width: 800px) {
+        * {
+          margin: 0;
+          padding: 0;
+        }
+        li {
+          display: inline-grid;
+          grid-template-columns: auto auto;
+        }
+        ul {
+          padding: 20px 0;
+          margin: 5px 10px;
+        }
+        header {
+          background-color: rgba(0, 0, 0, 0.585);
+          color: white;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        * {
+          margin: 0;
+          padding: 0;
+        }
+        li {
+          display: inline-grid;
+          grid-template-columns: auto auto;
+        }
+        ul {
+          padding: 10px 0;
+          margin: 2px 5px;
+        }
+        header {
+          background-color: rgba(245, 41, 41, 0.585);
+          color: white;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </header>
+    <div class="container">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam porro
+      fuga fugit modi laboriosam, totam tempore quod ratione expedita vitae
+      quisquam cupiditate sequi et tempora, dicta molestias facere quae commodi
+      harum! Repellendus mollitia at facilis nesciunt quam error aperiam earum
+      quia id eum.
+    </div>
+  </body>
+</html>

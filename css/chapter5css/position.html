@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>position</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      li {
+        display: inline;
+      }
+      nav {
+        background-color: red;
+        height: 10vh;
+        border: 3px solid green;
+      }
+      .bigbox {
+        background-color: blue;
+        color: white;
+        width: 60vw;
+        margin: auto;
+        height: 1500px;
+      }
+      .box {
+        background-color: blueviolet;
+        color: rgb(255, 31, 31);
+        margin: auto;
+        width: 300px;
+        height: 200px;
+      }
+      .p {
+        border: 4px dotted red;
+        margin: 0px 35px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+      }
+      .p3 {
+        border: 1px solid rgb(52, 231, 16);
+        width: fit-content;
+        position: relative;
+        bottom: 8%;
+      }
+      .p4 {
+        height: 50px;
+        width: 100px;
+        border-radius: 5px;
+        border: 2px solid red;
+        margin: auto;
+        position: fixed;
+        right: 0;
+        color: rgb(73, 12, 228);
+        background-image: url(/chapter5css/aa.jpg);
+        background-size: contain;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 9999;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+    </header>
+    <div class="bigbox">
+      <div class="p">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quas
+        possimus obcaecati, nesciunt, debitis non excepturi, voluptatum harum
+      </div>
+      <div class="box">I am a box</div>
+      <div class="p3">Tap</div>
+      <div class="p4">
+        <a href="http://127.0.0.1:5500/chapter5css/units.html">Tap here to chat with us</a>
+      </div>
+    </div>
+  </body>
+</html>
