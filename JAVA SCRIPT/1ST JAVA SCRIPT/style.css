@@ -1,0 +1,13 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #893f3f;
+}
+
+#numbers {
+    margin-top: 20px;
+    font-size: 18px;
+}
