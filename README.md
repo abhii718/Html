@@ -27,7 +27,7 @@
 </body>
 </html>
 Explanation:
-
+```
 <!DOCTYPE html>: Declares HTML5.
 
 <html>: Root element.
