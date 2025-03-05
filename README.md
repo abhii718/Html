@@ -1,119 +1,213 @@
-markdown
-Copy
-# HTML Complete Guide
+# HTML Full Guide
 
 ## Phase 1: Basics of HTML
 
-### 1.1 Introduction to HTML
-- **What is HTML?**  
-  HTML (HyperText Markup Language) is the standard markup language for creating web pages. It defines the structure of content using tags.
+### Introduction to HTML
+- **What is HTML?** HTML (HyperText Markup Language) is the standard language for creating web pages.
+- **How does it work?** HTML structures the content of a webpage using elements and tags.
 
-- **How it works**  
-  Browsers read HTML files and render them into visible/web pages.
-
----
-
-### 1.2 Basic HTML Structure
+### Basic Structure
 ```html
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Page</title>
+    <title>My First HTML Page</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Hello World</h1>
+    <h1>Welcome to HTML</h1>
     <p>This is a paragraph.</p>
 </body>
 </html>
-Key Components:
+```
 
-<!DOCTYPE html>: Declares HTML5.
+### Text Formatting
+HTML provides various tags for text formatting, such as headings, bold, italic, underline, and line breaks.
+```html
+<h1>Heading 1</h1>
+<p><b>Bold</b>, <i>Italic</i>, <u>Underline</u>, <strong>Strong</strong>, <em>Emphasized</em></p>
+<hr>
+<p>New line break <br> Example</p>
+```
 
-<html>: Root element.
-
-<head>: Contains metadata and linked resources.
-
-<body>: Visible content.
-
-1.3 Text Formatting
-html
-Copy
-<h1>Main Heading</h1>
-<h2>Subheading</h2>
-
-<p>
-  <b>Bold</b>, 
-  <i>Italic</i>, 
-  <u>Underline</u>, 
-  <strong>Important text</strong>, 
-  <em>Emphasized text</em>
-</p>
-
-<hr> <!-- Horizontal line -->
-<p>Line break<br>Example</p>
-Run HTML
-1.4 Lists
-Unordered List
-html
-Copy
+### Lists
+Lists help organize content in an ordered or unordered manner.
+```html
 <ul>
-  <li>Item 1</li>
-  <li>Item 2</li>
+    <li>Unordered List Item</li>
 </ul>
-Run HTML
-Ordered List
-html
-Copy
 <ol>
-  <li>First</li>
-  <li>Second</li>
+    <li>Ordered List Item</li>
 </ol>
-Run HTML
-Description List
-html
-Copy
 <dl>
-  <dt>Term 1</dt>
-  <dd>Definition 1</dd>
-  <dt>Term 2</dt>
-  <dd>Definition 2</dd>
+    <dt>Term</dt>
+    <dd>Definition</dd>
 </dl>
-Run HTML
-1.5 Links & Images
-html
-Copy
-<!-- External link -->
+```
+
+### Links & Anchors
+Links allow navigation to different web pages or sections within a page.
+```html
 <a href="https://example.com" target="_blank">Visit Example</a>
+<a href="#section">Jump to Section</a>
+```
 
-<!-- Internal link -->
-<a href="#contact">Contact Section</a>
-
-<!-- Image -->
-<img src="image.jpg" alt="Description" width="300">
-Run HTML
-1.6 Multimedia
-html
-Copy
-<!-- Audio -->
+### Images & Multimedia
+Images and multimedia elements enhance web content visually.
+```html
+<img src="image.jpg" alt="Description" width="200" height="150">
 <audio controls>
-  <source src="audio.mp3" type="audio/mpeg">
+    <source src="audio.mp3" type="audio/mpeg">
 </audio>
-
-<!-- Video -->
-<video controls width="400">
-  <source src="video.mp4" type="video/mp4">
+<video controls width="300">
+    <source src="video.mp4" type="video/mp4">
 </video>
-Run HTML
-Phase 2: Intermediate HTML
-2.1 Tables
-html
-Copy
+```
+
+---
+
+## Phase 2: Intermediate HTML
+
+### Tables
+Tables structure data in rows and columns.
+```html
 <table border="1">
-  <tr>
-    <th>Name</th>
-    <th>Age</th>
-  </tr>
-  <tr>
-    <td>Alice</td>
+    <tr>
+        <th>Heading 1</th>
+        <th>Heading 2</th>
+    </tr>
+    <tr>
+        <td>Data 1</td>
+        <td>Data 2</td>
+    </tr>
+</table>
+```
+
+### Forms & Input Fields
+Forms collect user input through various input fields.
+```html
+<form action="submit.php" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    <button type="submit">Submit</button>
+</form>
+```
+
+### Attributes & Global Attributes
+Attributes provide additional information about elements.
+```html
+<p id="unique" class="text-class" title="Tooltip">Text Example</p>
+<p data-info="Custom Data">Data Attribute Example</p>
+```
+
+---
+
+## Phase 3: Advanced HTML
+
+### Semantic HTML
+Semantic elements improve accessibility and SEO.
+```html
+<header>Header Section</header>
+<nav>Navigation Menu</nav>
+<section>Main Content</section>
+<article>Article Content</article>
+<aside>Sidebar</aside>
+<footer>Footer Information</footer>
+```
+
+### HTML APIs
+#### Drag & Drop
+Allows users to drag and drop elements.
+```html
+<div id="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)" style="border:1px solid black; width:200px; height:100px;"></div>
+<script>
+    function allowDrop(event) { event.preventDefault(); }
+    function drop(event) { event.preventDefault(); event.target.innerHTML = "Dropped!"; }
+</script>
+```
+
+#### Web Storage API
+Used for storing data in the browser.
+```html
+<script>
+    localStorage.setItem("username", "Abhi");
+    alert(localStorage.getItem("username"));
+</script>
+```
+
+#### Geolocation API
+Retrieves user location.
+```html
+<script>
+    navigator.geolocation.getCurrentPosition(function(position) {
+        alert("Latitude: " + position.coords.latitude + "\nLongitude: " + position.coords.longitude);
+    });
+</script>
+```
+
+#### Canvas API
+Used for drawing graphics.
+```html
+<canvas id="canvas" width="200" height="100" style="border:1px solid black;"></canvas>
+<script>
+    var ctx = document.getElementById("canvas").getContext("2d");
+    ctx.fillStyle = "blue";
+    ctx.fillRect(10, 10, 50, 50);
+</script>
+```
+
+#### SVG
+Scalable Vector Graphics format.
+```html
+<svg width="100" height="100">
+    <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+</svg>
+```
+
+### SEO Best Practices
+#### Meta Tags
+Help with search engine visibility.
+```html
+<head>
+    <meta name="description" content="Learn HTML step-by-step.">
+    <meta name="keywords" content="HTML, Web Development">
+    <meta name="author" content="Abhi">
+</head>
+```
+
+#### Open Graph (Social Media Preview)
+Used to control how links appear on social media.
+```html
+<head>
+    <meta property="og:title" content="HTML Guide">
+    <meta property="og:description" content="Complete HTML learning guide.">
+    <meta property="og:image" content="thumbnail.jpg">
+    <meta property="og:url" content="https://example.com">
+</head>
+```
+
+#### Schema Markup (Structured Data)
+Enhances search engine understanding of content.
+```html
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "HTML Guide",
+    "author": { "@type": "Person", "name": "Abhi" }
+}
+</script>
+```
+
+---
+
+## Summary
+✅ **HTML Basics** – Structure, Elements, Forms, Inputs  
+✅ **HTML APIs** – Drag & Drop, Web Storage, Geolocation, Canvas, SVG  
+✅ **SEO** – Meta Tags, Open Graph, Schema Markup  
+
+---
+
+This guide provides essential knowledge for mastering HTML. 🚀
