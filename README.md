@@ -1,37 +1,38 @@
-# HTML Full Guide
+# HTML Complete Guide
 
 ## Phase 1: Basics of HTML
 
-### Introduction to HTML
+### 1.1 Introduction to HTML
 - **What is HTML?**  
-  HTML (HyperText Markup Language) is the standard markup language for creating web pages. It structures content using tags and elements.
+  HTML (HyperText Markup Language) is the standard markup language for creating web pages. It defines the structure of content using tags.
 
-- **How does it work?**  
-  Browsers render HTML files and display text, images, links, etc., based on the tags used.
+- **How it works**  
+  Browsers read HTML files and render them into visible/web pages.
 
 ---
 
-### Basic Structure
+### 1.2 Basic HTML Structure
 ```html
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My First HTML Page</title>
+    <title>My Page</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to HTML</h1>
+    <h1>Hello World</h1>
     <p>This is a paragraph.</p>
 </body>
 </html>
-Explanation:
 ```
+Key Components:
+
 <!DOCTYPE html>: Declares HTML5.
 
 <html>: Root element.
 
 <head>: Contains metadata and linked resources.
 
-<body>: Holds visible content.
+<body>: Visible content.
+
